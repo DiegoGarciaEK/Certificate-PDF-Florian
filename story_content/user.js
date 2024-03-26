@@ -85,7 +85,7 @@ img.onload = function() {
 	doc.setFont('MetaPro-Bold', 'normal');/* Parameters for name of the training start here */
 	doc.setFontSize(20);
 	doc.setTextColor(225, 5, 30);
-	doc.text(training, (doc.internal.pageSize.width / 2), 172, null, null, 'center');
+	doc.text(training, (doc.internal.pageSize.width / 2), 173, null, null, 'center');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the date and place start here */
 	doc.setFontSize(20);
