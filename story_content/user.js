@@ -90,7 +90,7 @@ img.onload = function() {
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the date and place start here */
 	doc.setFontSize(20);
 	doc.setTextColor(0, 0, 0);
-	doc.text(fline, (doc.internal.pageSize.width / 2), 190, null, null, 'center');
+	doc.text(fline, (doc.internal.pageSize.width / 2), 192, null, null, 'center');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer start here */
 	doc.setFontSize(18);
