@@ -64,40 +64,52 @@ var name = player.GetVar("Name"); /* Name of the participant (comes from Storyli
 var firma = player.GetVar("Company"); /* Company of the participant (comes from Storyline input) */
 var training = "Principles of the sealing technology\r\n in combustion engines";
 var city = player.GetVar("City");
-var fline = 'in ' + city + ' in ' + date;
+var line1 = 'has participated in the training seminar';
+var line2 = 'in ' + city + ' in ' + date;
 var trainer = "FLORIAN KIZIAK";
+var line3 = 'Technical Trainer IAM';
 
 var doc = new jsPDF();
 var img = new Image;
 img.onload = function() {
 	doc.addImage(this, 0, 0, 210, 297); /* A4 size portrait */
 	
-	doc.setFontSize(34);/* Parameters for name of the participant start here */
+	doc.setFontSize(34);/* Parameters for the name of the participant */
 	doc.setTextColor(0, 0, 0);
 	doc.setFont('MetaPro-Bold', 'normal'); 
 	doc.text(name, (doc.internal.pageSize.width / 2), 139, null, null, 'center');
 
-	doc.setFontSize(28);/* Parameters for name of the company start here */
+	doc.setFontSize(28);/* Parameters for the name of the company */
 	doc.setTextColor(0, 0, 0);
 	doc.setFont('MetaPro-Bold', 'normal'); 
 	doc.text(firma, (doc.internal.pageSize.width / 2), 153, null, null, 'center');
-	
-	doc.setFont('MetaPro-Bold', 'normal');/* Parameters for name of the training start here */
+
+	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the first line */
+	doc.setFontSize(20);
+	doc.setTextColor(0, 0, 0);
+	doc.text(line1, (doc.internal.pageSize.width / 2), 165, null, null, 'center');
+
+	doc.setFont('MetaPro-Bold', 'normal');/* Parameters for the name of the training */
 	doc.setFontSize(20);
 	doc.setTextColor(225, 5, 30);
 	doc.text(training, (doc.internal.pageSize.width / 2), 174, null, null, 'center');
 
-	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the date and place start here */
+	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the second line */
 	doc.setFontSize(20);
 	doc.setTextColor(0, 0, 0);
-	doc.text(fline, (doc.internal.pageSize.width / 2), 192, null, null, 'center');
+	doc.text(line2, (doc.internal.pageSize.width / 2), 192, null, null, 'center');
 
-	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer start here */
+	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer */
 	doc.setFontSize(18);
 	doc.setTextColor(0, 0, 0);
 	doc.text(trainer, (doc.internal.pageSize.width / 2), 238, null, null, 'center');
 	
-	doc.save("Certificate.pdf"); /* Swap out ‘Certificate’ with what you want your certificate to be named */
+	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the last line */
+	doc.setFontSize(18);
+	doc.setTextColor(0, 0, 0);
+	doc.text(line 3, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
+	
+	doc.save("Certificate Elring.pdf"); /* Swap out ‘Certificate’ with what you want your certificate to be named */
   };
 img.crossOrigin = "";  
 img.src = "Zertifikat_2024_Florian.png"; /* Name of the certificate template */
