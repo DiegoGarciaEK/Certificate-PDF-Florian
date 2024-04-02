@@ -107,7 +107,7 @@ img.onload = function() {
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the last line */
 	doc.setFontSize(18);
 	doc.setTextColor(0, 0, 0);
-	doc.text(line 3, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
+	doc.text(line3, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
 	
 	doc.save("Certificate Elring.pdf"); /* Swap out ‘Certificate’ with what you want your certificate to be named */
   };
