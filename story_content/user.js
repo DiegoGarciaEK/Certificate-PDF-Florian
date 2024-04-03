@@ -105,7 +105,7 @@ img.onload = function() {
 	doc.text(line2, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the last line */
-	doc.setFontSize(18);
+	doc.setFontSize(15);
 	doc.setTextColor(0, 0, 0);
 	doc.text(line3, (doc.internal.pageSize.width / 2), 255, null, null, 'center');
 	
