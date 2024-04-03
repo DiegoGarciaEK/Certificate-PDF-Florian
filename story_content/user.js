@@ -65,7 +65,7 @@ var firma = player.GetVar("Company"); /* Company of the participant (comes from 
 var training = "Principles of the sealing technology\r\n in combustion engines";
 var city = player.GetVar("City");
 var line1 = 'has participated in the training seminar';
-var line2 = 'in ' + city + ' in ' + date;
+var line2 = 'in ' + city + ', ' + date;
 var trainer = "FLORIAN KIZIAK";
 var line3 = 'Technical Trainer IAM';
 
@@ -95,9 +95,9 @@ img.onload = function() {
 	doc.text(training, (doc.internal.pageSize.width / 2), 179, null, null, 'center');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the second line */
-	doc.setFontSize(20);
+	doc.setFontSize(15);
 	doc.setTextColor(0, 0, 0);
-	doc.text(line2, (doc.internal.pageSize.width / 2), 197, null, null, 'right');
+	doc.text(line2, (doc.internal.pageSize.width - 20), 197, null, null, 'right');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer */
 	doc.setFontSize(18);
