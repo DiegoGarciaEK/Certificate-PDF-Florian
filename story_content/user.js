@@ -97,7 +97,7 @@ img.onload = function() {
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the second line */
 	doc.setFontSize(20);
 	doc.setTextColor(0, 0, 0);
-	doc.text(line2, (doc.internal.pageSize.width / 2), 197, null, null, 'center');
+	doc.text(line2, (doc.internal.pageSize.width / 2), 197, null, null, 'right');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer */
 	doc.setFontSize(18);
