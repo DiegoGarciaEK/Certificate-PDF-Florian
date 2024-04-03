@@ -65,7 +65,7 @@ var firma = player.GetVar("Company"); /* Company of the participant (comes from 
 var training = "Principles of the sealing technology\r\n in combustion engines";
 var city = player.GetVar("City");
 var line1 = 'has participated in the training seminar';
-var line2 = 'in ' + city + ', ' + date;
+var line2 = 'held in ' + city + ', ' + date;
 var trainer = "FLORIAN KIZIAK";
 var line3 = 'Technical Trainer IAM';
 
