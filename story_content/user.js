@@ -65,9 +65,9 @@ var firma = player.GetVar("Company"); /* Company of the participant (comes from 
 var training = "Principles of the sealing technology\r\n in combustion engines";
 var city = player.GetVar("City");
 var line1 = 'has participated in the training seminar';
-var line2 = 'held in ' + city + ', ' + date;
 var trainer = "FLORIAN KIZIAK";
-var line3 = 'Technical Trainer IAM';
+var line2 = 'Technical Trainer IAM';
+var line3 = city + ', ' + date;
 
 var doc = new jsPDF();
 var img = new Image;
@@ -94,20 +94,20 @@ img.onload = function() {
 	doc.setTextColor(225, 5, 30);
 	doc.text(training, (doc.internal.pageSize.width / 2), 179, null, null, 'center');
 
-	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the second line */
-	doc.setFontSize(15);
-	doc.setTextColor(0, 0, 0);
-	doc.text(line2, (doc.internal.pageSize.width - 20), 197, null, null, 'right');
-
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer */
 	doc.setFontSize(18);
 	doc.setTextColor(0, 0, 0);
 	doc.text(trainer, (doc.internal.pageSize.width / 2), 239, null, null, 'center');
 	
+	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the second line */
+	doc.setFontSize(18);
+	doc.setTextColor(0, 0, 0);
+	doc.text(line2, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
+
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the last line */
 	doc.setFontSize(18);
 	doc.setTextColor(0, 0, 0);
-	doc.text(line3, (doc.internal.pageSize.width / 2), 247, null, null, 'center');
+	doc.text(line3, (doc.internal.pageSize.width / 2), 255, null, null, 'center');
 	
 	doc.save("Certificate Elring.pdf"); /* Swap out ‘Certificate’ with what you want your certificate to be named */
   };
