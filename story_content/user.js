@@ -87,12 +87,12 @@ img.onload = function() {
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the first line */
 	doc.setFontSize(20);
 	doc.setTextColor(0, 0, 0);
-	doc.text(line1, (doc.internal.pageSize.width / 2), 169, null, null, 'center');
+	doc.text(line1, (doc.internal.pageSize.width / 2), 175, null, null, 'center');
 
 	doc.setFont('MetaPro-Bold', 'normal');/* Parameters for the name of the training */
 	doc.setFontSize(20);
 	doc.setTextColor(225, 5, 30);
-	doc.text(training, (doc.internal.pageSize.width / 2), 179, null, null, 'center');
+	doc.text(training, (doc.internal.pageSize.width / 2), 185, null, null, 'center');
 
 	doc.setFont('MetaPro-Norm', 'normal');/* Parameters for the name of the trainer */
 	doc.setFontSize(18);
